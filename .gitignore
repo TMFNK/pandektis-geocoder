@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated output files (reproducible by running the scraper)
+greece_renamings.geojson
+greece_renamings.xlsx
+sample_5_rows.json
+failed_geocoding.csv
+progress.json
+failed_parsing.csv
+
+# Environment variables
+.env
