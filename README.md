@@ -4,6 +4,8 @@ Scrape and geocode settlement renaming records from [PANDEKTIS](https://pandekti
 
 Extracts ~4,413 settlement renaming records (old name → new name, prefecture, date, official journal), geocodes them via [OpenStreetMap Nominatim](https://nominatim.openstreetmap.org/), and exports as GeoJSON + Excel.
 
+![Map Output Example](map_output_example.jpg)
+
 ## What It Does
 
 | Phase | Description |
