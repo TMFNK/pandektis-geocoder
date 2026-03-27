@@ -105,4 +105,6 @@ No external API keys. Python 3.14+.
 
 ## License
 
+This project is licensed under the [GNU General Public License v3.0](LICENSE).
+
 Data sourced from [PANDEKTIS](https://pandektis.ekt.gr/), operated by the Greek National Documentation Centre (EKT). The original dataset is public.
