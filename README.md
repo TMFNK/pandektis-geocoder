@@ -1,4 +1,4 @@
-# Greece-GEO
+# pandektis-geocoder
 
 Scrape and geocode settlement renaming records from [PANDEKTIS](https://pandektis.ekt.gr/) — the Greek National Documentation Centre's digital archive.
 
@@ -18,8 +18,8 @@ Extracts ~4,413 settlement renaming records (old name → new name, prefecture, 
 
 ```bash
 # Clone and enter the repo
-git clone https://github.com/TMFNK/Greece-GEO.git
-cd Greece-GEO
+git clone https://github.com/TMFNK/pandektis-geocoder.git
+cd pandektis-geocoder
 
 # Create virtual environment and install dependencies
 python3 -m venv .venv
