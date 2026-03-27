@@ -8,17 +8,17 @@ Extracts ~4,413 settlement renaming records (old name → new name, prefecture, 
 
 ## What It Does
 
-| Phase | Description |
-|-------|-------------|
-| **Scrape** | Collects all entry URLs from the browse pagination, then parses each entry page for metadata |
+| Phase       | Description                                                                                        |
+| ----------- | -------------------------------------------------------------------------------------------------- |
+| **Scrape**  | Collects all entry URLs from the browse pagination, then parses each entry page for metadata       |
 | **Geocode** | Multi-strategy Nominatim queries with 9 fallback strategies and prefecture bounding box validation |
-| **Export** | RFC 7946 GeoJSON, formatted Excel (.xlsx), sample JSON, and failed geocoding CSV |
+| **Export**  | RFC 7946 GeoJSON, formatted Excel (.xlsx), sample JSON, and failed geocoding CSV                   |
 
 ## Quick Start
 
 ```bash
 # Clone and enter the repo
-git clone https://github.com/youruser/Greece-GEO.git
+git clone https://github.com/TMFNK/Greece-GEO.git
 cd Greece-GEO
 
 # Create virtual environment and install dependencies
@@ -45,13 +45,13 @@ python3 scrape_pandektis.py --skip-scrape --skip-geocode  # Export only
 
 ## Output Files
 
-| File | Description |
-|------|-------------|
+| File                       | Description                                 |
+| -------------------------- | ------------------------------------------- |
 | `greece_renamings.geojson` | GeoJSON FeatureCollection (RFC 7946, CRS84) |
-| `greece_renamings.xlsx` | Excel workbook with formatted headers |
-| `sample_5_rows.json` | First 5 geocoded records |
-| `failed_geocoding.csv` | Entries that couldn't be geocoded |
-| `progress.json` | Resume checkpoint |
+| `greece_renamings.xlsx`    | Excel workbook with formatted headers       |
+| `sample_5_rows.json`       | First 5 geocoded records                    |
+| `failed_geocoding.csv`     | Entries that couldn't be geocoded           |
+| `progress.json`            | Resume checkpoint                           |
 
 ## GeoJSON Feature Schema
 
@@ -79,12 +79,12 @@ python3 scrape_pandektis.py --skip-scrape --skip-geocode  # Export only
 
 Uses the new settlement name + prefecture as the primary query, with progressive fallbacks through Greek names, municipality names, and genitive→nominative morphological conversion. Coordinates are validated against 52 prefecture bounding boxes.
 
-| Strategy | Example |
-|----------|---------|
-| `en+pref` | `Kallithea, THESSALONIKI, Greece` |
-| `gr+pref` | `Καλλιθέα, THESSALONIKI, Greece` |
-| `mun_en+pref` | `Thermi, THESSALONIKI, Greece` |
-| `gr_grpref` | `Καλλιθέα, Θεσσαλονίκης, Greece` |
+| Strategy      | Example                           |
+| ------------- | --------------------------------- |
+| `en+pref`     | `Kallithea, THESSALONIKI, Greece` |
+| `gr+pref`     | `Καλλιθέα, THESSALONIKI, Greece`  |
+| `mun_en+pref` | `Thermi, THESSALONIKI, Greece`    |
+| `gr_grpref`   | `Καλλιθέα, Θεσσαλονίκης, Greece`  |
 
 ~96% geocoding success rate. No API keys required.
 
