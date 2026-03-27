@@ -23,6 +23,14 @@ env/
 .DS_Store
 Thumbs.db
 
+# Environment variables
+.env
+
+# Project files (track only README.md)
+SPEC.md
+requirements.txt
+scrape_pandektis.py
+
 # Generated output files (reproducible by running the scraper)
 greece_renamings.geojson
 greece_renamings.xlsx
@@ -30,6 +38,3 @@ sample_5_rows.json
 failed_geocoding.csv
 progress.json
 failed_parsing.csv
-
-# Environment variables
-.env
